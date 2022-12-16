@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav */
+
+.nav-container {
+    display: flex;
+    color:#FFF;
+    font-size: 20px;
+    transition: all 0.3s linear;
+    background: #7abcff;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/* .nav-container:hover {
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+} */
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 16px;
+}
+
+li {
+    padding: 20px;
+    transition: transform .4s;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+.push {
+    margin-left: auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase; 
+}
+
+/* Hamburger */
+  
+.menu-icon {
+    display: none;
+    padding: 15px;
+    /* position: absolute;
+    right: 0;
+    top: 25px; */
+  }
+  
+.hamburger-lines {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  
+  body.is-visible .line1 {
+    transform: rotate(45deg);
+  }
+  body.is-visible .line2 {
+    transform: scaleY(0);
+  }
+  body.is-visible .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .line {
+    transition: all 300ms;
+  }
+  
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  body.is-visible .small-menu-container {
+    display: block;
+  }
+
+  .small-menu-container {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    text-transform: uppercase;
+    left: 0;
+    top: 60px;
+    max-width: 375px;
+    z-index: 10;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  }
+  
+  .small-menu-list {
+    background-color: #7abcff;
+    margin: 0;
+  }
+  
+  .small-menu-list > li {
+    padding: 16px 164.5px 16px 16px;
+    box-sizing: border-box;
+    /* border-top: 1px solid #000000; */
+    /* border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000; */
+    /* border-right: 1px solid #000000; */
+  }
+
+/* Cover */
+
+.cover {
+    /* background: #3c6185; */
+    background: #ffffff;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 400px;
+    transition: transform .4s; 
+}
+
+svg {
+    height: 200px;
+    transition: transform 1s;
+    z-index: 10;
+    padding: 0 10px;
+}
+
+#canon {
+    animation: canons 3s;
+    animation-delay: 1s;
+}
+
+@keyframes canons {
+    to {
+        transform: rotate(-7deg);
+    } 
+}
+
+#smoke, #disc {
+    animation: movement 3s;
+    animation-delay: 1s;
+    position: absolute;
+}
+
+@keyframes movement {
+    to {
+        transform: scale(1.5);
+    } 
+}
+
+.cover-right {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    color: #000;
+}
+
+h1 {
+    text-transform: uppercase;
+    /* text-shadow: 3px 3px 3px #000; */
+    color: #000;
+    padding-left: 20px;
+}
+
+.grid-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    transition: all 0.3s linear;
+    background: #7abcff;
+}
+
+
+.grid-wrapper:hover {
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.post-it-note {
+    height: 300px;
+    max-width: 350px;
+    text-transform: uppercase;
+    padding: 25px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    background-color: #ffc;
+    transform: rotate(2deg);
+    margin: 40px;
+    transition: transform 1s;
+    font-family: 'Reenie Beanie';
+    font-size: 30px;
+}
+
+.post-it-note:hover {
+    transform: scale(1.02);
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.post-it-note > p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mini-note {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    background:#ccf;
+    transform: rotate(2deg);
+    box-shadow:5px 5px 10px rgba(0,0,0,.7);
+    text-transform: uppercase;
+    font-family: 'Reenie Beanie';
+    font-size: 40px;
+    transition: transform 1s;
+}
+
+button:hover {
+    transform: scale(1.2);
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+/* bankarta */
+
+.info-container {
+    /* display: flex;
+   height: 70vh;
+   background-image: url(./img/infoskylt.png);
+   background-size: contain;
+   background-repeat: no-repeat; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.info-container > img {
+    /* height: 50vh; */
+    width: 80vw;
+    padding: 20px;
+}
+
+/* .info-sign {
+    width: 100%;
+    margin: 0 auto;
+} */
+
+.box {
+    max-width: 350px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin: 40px;
+}
+
+.box > img {
+    width: 100%;  
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 750px) {
+    .main-nav {
+        display: none;
+    }
+
+    li {
+        padding: 20px 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        /* position: absolute;
+        right: 16px; */
+      }
+
+    .cover {
+        display: block;
+    }
+}
